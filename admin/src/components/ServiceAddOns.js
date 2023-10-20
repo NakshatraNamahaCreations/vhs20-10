@@ -58,7 +58,7 @@ function ServiceAddOns() {
       const config = {
         url: "/userapp/addServiceAddOns",
         method: "post",
-        baseURL: "http://localhost:8080/api",
+        baseURL: "http://api.vijayhomeservicebengaluru.in/api",
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -85,7 +85,7 @@ function ServiceAddOns() {
 
   const getAllAddOns = async () => {
     let res = await axios.get(
-      "http://localhost:8080/api/userapp/getServiceAddOns"
+      "http://api.vijayhomeservicebengaluru.in/api/userapp/getServiceAddOns"
     );
     if (res.status === 200) {
       console.log(res);
@@ -108,7 +108,7 @@ function ServiceAddOns() {
       const config = {
         url: `/userapp/updateServiceAddOns/${editAddOnsData._id}`,
         method: "put",
-        baseURL: "http://localhost:8080/api",
+        baseURL: "http://api.vijayhomeservicebengaluru.in/api",
         headers: { "Content-Type": "multipart/form-data" },
         data: formdata,
       };
@@ -128,7 +128,7 @@ function ServiceAddOns() {
   const deleteAddOns = async (id) => {
     axios({
       method: "delete",
-      url: "http://localhost:8080/api/userapp/deleteServiceAddOns/" + id,
+      url: "http://api.vijayhomeservicebengaluru.in/api/userapp/deleteServiceAddOns/" + id,
     })
       .then(function (response) {
         console.log(response);
@@ -170,7 +170,7 @@ function ServiceAddOns() {
       cell: (row) => (
         <div>
           <img
-            src={`http://localhost:8080/addOns/${row.addOnsImage}`}
+            src={`http://api.vijayhomeservicebengaluru.in/addOns/${row.addOnsImage}`}
             width="50px"
             height="50px"
             alt=""
@@ -207,7 +207,7 @@ function ServiceAddOns() {
   }, []);
 
   const getservicemanagement = async () => {
-    let res = await axios.get("http://localhost:8080/api/userapp/getservices");
+    let res = await axios.get("http://api.vijayhomeservicebengaluru.in/api/userapp/getservices");
     if ((res.status = 200)) {
       setServicedata(res.data?.service);
 

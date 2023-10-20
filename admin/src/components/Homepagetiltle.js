@@ -33,7 +33,7 @@ function Homepagetitle() {
         const config = {
           url: "/userapp/addtitle",
           method: "post",
-          baseURL: "http://localhost:8080/api",
+          baseURL: "http://api.vijayhomeservicebengaluru.in/api",
           data: {
             title: title,
           },
@@ -56,7 +56,7 @@ function Homepagetitle() {
   }, []);
 
   const gettitle = async () => {
-    let res = await axios.get("http://localhost:8080/api/userapp/gettitle");
+    let res = await axios.get("http://api.vijayhomeservicebengaluru.in/api/userapp/gettitle");
     if ((res.status = 200)) {
       settitledata(res.data?.homepagetitle);
       setfilterdata(res.data?.homepagetitle);
@@ -70,7 +70,7 @@ function Homepagetitle() {
       const config = {
         url: `/userapp/edittitle/${data._id}`,
         method: "post",
-        baseURL: "http://localhost:8080/api",
+        baseURL: "http://api.vijayhomeservicebengaluru.in/api",
         headers: { "content-type": "application/json" },
         data: {
           title: title1,
@@ -127,7 +127,7 @@ function Homepagetitle() {
   const deletetitle = async (id) => {
     axios({
       method: "post",
-      url: "http://localhost:8080/api/userapp/deletetitle/" + id,
+      url: "http://api.vijayhomeservicebengaluru.in/api/userapp/deletetitle/" + id,
     })
       .then(function (response) {
         //handle success

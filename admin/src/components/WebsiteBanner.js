@@ -38,7 +38,7 @@ function Banner() {
       const config = {
         url: "/website/addwebbanner",
         method: "post",
-        baseURL: "http://localhost:8080/api",
+        baseURL: "http://api.vijayhomeservicebengaluru.in/api",
 
         data: formdata,
       };
@@ -59,7 +59,7 @@ function Banner() {
   }, []);
 
   const getbannerimg = async () => {
-    let res = await axios.get("http://localhost:8080/api/website/getallwebbanner");
+    let res = await axios.get("http://api.vijayhomeservicebengaluru.in/api/website/getallwebbanner");
     if ((res.status = 200)) {
       setBannerdata(res.data?.banner);
       console.log(res.data?.banner);
@@ -69,7 +69,7 @@ function Banner() {
   const deletebannerimg = async (id) => {
     axios({
       method: "post",
-      url: "http://localhost:8080/api/website/deletewebbanner/" + id,
+      url: "http://api.vijayhomeservicebengaluru.in/api/website/deletewebbanner/" + id,
     })
       .then(function (response) {
         //handle success
@@ -136,7 +136,7 @@ function Banner() {
                           <td>
                             <img
                               className="header_logo"
-                              src={`http://localhost:8080/webBanner/${element.banner}`}
+                              src={`http://api.vijayhomeservicebengaluru.in/webBanner/${element.banner}`}
                               width={"100px"}
                               height={"50px"}
                             />

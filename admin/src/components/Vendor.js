@@ -83,7 +83,7 @@ function Vendor() {
         const config = {
           url: "/addtechnician",
           method: "post",
-          baseURL: "http://localhost:8080/api",
+          baseURL: "http://api.vijayhomeservicebengaluru.in/api",
           // data: formdata,
           headers: { "content-type": "application/json" },
           data: {
@@ -118,7 +118,7 @@ function Vendor() {
   }, []);
 
   const gettechnician = async () => {
-    let res = await axios.get("http://localhost:8080/api/getalltechnician");
+    let res = await axios.get("http://api.vijayhomeservicebengaluru.in/api/getalltechnician");
     if ((res.status = 200)) {
       settechniciandata(res.data?.technician.filter((i)=>i.Type === "Vendor"));
       setfilterdata(res.data?.technician.filter((i)=>i.Type === "Vendor"));
@@ -126,13 +126,13 @@ function Vendor() {
   };
 
   const getcity = async () => {
-    let res = await axios.get("http://localhost:8080/api/master/getcity");
+    let res = await axios.get("http://api.vijayhomeservicebengaluru.in/api/master/getcity");
     if ((res.status = 200)) {
       setcitydata(res.data?.mastercity);
     }
   };
   const getcategory = async () => {
-    let res = await axios.get("http://localhost:8080/api/getcategory");
+    let res = await axios.get("http://api.vijayhomeservicebengaluru.in/api/getcategory");
     if ((res.status = 200)) {
       setcategorydata(res.data?.category);
     }
@@ -141,7 +141,7 @@ function Vendor() {
   const deletetechnician = async (id) => {
     axios({
       method: "post",
-      url: "http://localhost:8080/api/deletetechnician/" + id,
+      url: "http://api.vijayhomeservicebengaluru.in/api/deletetechnician/" + id,
     })
       .then(function (response) {
         //handle success
@@ -241,7 +241,7 @@ function Vendor() {
       const config = {
         url: `/edittechnician/${data._id}`,
         method: "post",
-        baseURL: "http://localhost:8080/api",
+        baseURL: "http://api.vijayhomeservicebengaluru.in/api",
         headers: { "content-type": "application/json" },
         data: {
           Type: Type1,

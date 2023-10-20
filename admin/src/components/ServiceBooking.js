@@ -20,7 +20,7 @@ function ServiceBooking() {
 
   const getappcustomer = async () => {
     let res = await axios.get(
-      "http://localhost:8080/api/getrunningdata"
+      "http://api.vijayhomeservicebengaluru.in/api/getrunningdata"
     );
     if ((res.status = 200)) {
       setservicedata(

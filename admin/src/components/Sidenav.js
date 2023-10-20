@@ -25,7 +25,7 @@ function Sidenav() {
       const config = {
         url: `/super/logout/${admin?._id}`,
         method: "post",
-        baseURL: "http://localhost:8080/api",
+        baseURL: "http://api.vijayhomeservicebengaluru.in/api",
         headers: { "content-type": "application/json" },
         data: {},
       };

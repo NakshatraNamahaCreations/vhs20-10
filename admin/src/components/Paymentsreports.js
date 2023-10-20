@@ -63,7 +63,7 @@ useEffect(() => {
 
   const getapppauyments = async () => {
     let res = await axios.get(
-      "http://localhost:8080/api/payment/service/paywithuserdata"
+      "http://api.vijayhomeservicebengaluru.in/api/payment/service/paywithuserdata"
     );
     if ((res.status = 200)) {
       setpaymentdata(res.data?.userdata);

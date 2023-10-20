@@ -19,7 +19,7 @@ function Login() {
       const config = {
         url: "/super/loginSuperAdmin",
         method: "post",
-        baseURL: "http://localhost:8080/api",
+        baseURL: "http://api.vijayhomeservicebengaluru.in/api",
         headers: { "content-type": "application/json" },
         data: { emailorphone: emailOrName, password: password },
       };
